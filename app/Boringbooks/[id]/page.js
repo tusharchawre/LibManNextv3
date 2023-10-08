@@ -30,7 +30,7 @@ async function getDatashit() {
 
 async function getData(id) {
 
-  const res = await fetch(`http://localhost:3000/api/techknowledge/${id}`, {cache:"no-store"})
+  const res = await fetch(`${process.env.URL_}/api/techknowledge/${id}`, {cache:"no-store"})
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
