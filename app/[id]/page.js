@@ -40,7 +40,9 @@ async function getData(id) {
 
 const page = async ({params}) => {
 
-
+if(!process.env.URL_){
+  return null;
+}
   
  
 const data = await getData(params.id)

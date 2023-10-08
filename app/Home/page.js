@@ -38,7 +38,9 @@ async function getData() {
 
 const page = async () => {
     // const [books, setbooks] = useState([])
-
+    if(!process.env.URL_){
+      return null;
+    }
     const data = await getData()
 
 

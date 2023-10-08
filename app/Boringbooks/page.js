@@ -19,7 +19,9 @@ async function getData() {
 }
 
 const page = async () => {
-
+  if(!process.env.URL_){
+    return null;
+  }
    
 
   const data = await getData()
