@@ -1,0 +1,30 @@
+{
+  "name": "libman_next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.25",
+    "axios": "^1.5.1",
+    "git": "^0.1.5",
+    "mongoose": "6.11.1",
+    "next": "latest",
+    "react": "latest",
+    "react-burger-menu": "^3.0.9",
+    "react-dom": "latest",
+    "react-icons": "^4.11.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-use-downloader": "^1.2.4",
+    "remixicon": "^3.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
+}

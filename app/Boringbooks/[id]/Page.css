@@ -1,0 +1,133 @@
+.main{
+    font-family: 'Inter', sans-serif;
+    overflow: scroll;
+
+}
+
+.thumb{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: fit-content;
+    /* background-color: red; */
+    gap: 5vh;
+
+    align-items: center;
+    padding: 8vw 0vw;
+}
+
+.details{
+    width: 200px;
+}
+
+@media  (max-width: 600px) {
+    .aboutpage{
+        flex-direction: column;
+    }
+    .thumb{
+        width: 100%;
+        display: flex;
+        padding-left: 3vmax;
+
+        flex-direction:row;
+    }
+    .thumbs{
+        flex-shrink: 0;
+
+       
+        width: 130px  !important;
+        height: 190px !important;
+        scale: 1.3;
+        
+
+    }
+    
+    .jankari{
+        padding: 8vmin 2vmax !important;
+
+        
+        width: 100% !important;
+    
+    }
+
+}
+
+
+
+.jankari{
+    padding: 8vw 0vw;
+    /* background-color: teal; */
+    height: fit-content;
+    width: 70%;
+
+}
+
+.aboutpage{
+    display: flex;
+    padding: 0 10vw;
+    position: relative;
+}
+
+.heading{
+    padding: 1vw;
+}
+
+.about-book{
+    padding: 2vw 0vw;
+    width: 90%;
+
+}
+
+.about-book h4{
+    font-size: 1.3vmax;
+    font-weight: 700;
+    color: red;
+}
+
+button{
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 1.2vmax;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+button i{
+    padding-left: 10px;
+}
+
+.details p:nth-child(1){
+    color: red;
+    padding: 1vw 0;
+}
+
+.track{
+    padding: 0 8vw;
+    padding-bottom: 15vh;
+
+    overflow: hidden;
+}
+
+.horizontaltrack{
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: auto;
+
+
+}
+
+.horizontaltrack::-webkit-scrollbar {
+    display: none;
+  }
+
+  .horizontaltrack .thumbs{
+    flex-shrink: 0;
+    scale: 0.8;
+}
+
+
+.trackshit p {
+    opacity: 0.4;
+
+}
