@@ -24,6 +24,17 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 
+
+
+
+const page = () => {
+
+
+
+
+
+useEffect(() => {
+
 let herotext = document.querySelector(".herotext1")
 
 
@@ -142,14 +153,6 @@ const navanim = ()=>{
   
 }
 
-
-
-
-const page = () => {
-
-
-
-useEffect(() => {
   window.addEventListener( "mousemove",function(dets){
     document.querySelector(".cursor").style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`
   })
