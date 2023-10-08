@@ -164,9 +164,6 @@ const navanim = ()=>{
 
 
 
-useEffect(() => {
-navanim()
-}, [])
 
 
 

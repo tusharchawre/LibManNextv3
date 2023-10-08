@@ -19,7 +19,7 @@ import Menu from "app/components/Menu.js";
 
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/books', {cache:"no-store"})
+  const res = await fetch(process.env.URL+'/api/books', {cache:"no-store"})
 
  
   if (!res.ok) {
