@@ -9,6 +9,17 @@ import gsap, { Bounce, Power2, Power3 } from 'gsap';
 import Image from 'next/image';
 import Menu from './components/Menu'
 
+
+
+
+
+
+
+
+const page = () => {
+
+  useEffect(() => {
+   
 /// Scrolling
 const lenis = new Lenis()
 
@@ -26,26 +37,7 @@ requestAnimationFrame(raf)
 
 
 
-
-const page = () => {
-
-
-
-
-
-
-
-let herotext = document.querySelector(".herotext1")
-
-if (typeof window !== "undefined") {
   
-  
-  
-  
-  
-  
-  
-
   window.addEventListener("scroll",function(){
     
     let parallax = document.getElementById("books")
@@ -98,7 +90,7 @@ if (typeof window !== "undefined") {
     
     
     
-    window.onmousedown = e => {
+    window.onmousedown = (e) => {
       const track = document.getElementById("image-track");
       
       track.dataset.mouseDownAt = e.clientX;
@@ -111,7 +103,7 @@ if (typeof window !== "undefined") {
       track.dataset.prevPercentage = track.dataset.percentage;
     }
     
-    window.onmousemove = e =>{
+    window.onmousemove = (e) =>{
       const track = document.getElementById("image-track");
       
       if(track.dataset.mouseDownAt === "0")return;
@@ -137,33 +129,32 @@ if (typeof window !== "undefined") {
       
       track.style.transform = `translate(${nextpercentage}%,-50%)`;
       
-  for(const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${100 + nextpercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
-  }
-}
-
-const navanim = ()=>{
-  gsap.from(".bruh",{
+      for(const image of track.getElementsByClassName("image")) {
+        image.animate({
+          objectPosition: `${100 + nextpercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      }
+    }
     
-    opacity: 0,
-    duration: 1.5,
-    ease: Power3
-  })
-  
-}
-
-window.addEventListener( "mousemove",function(dets){
-  document.querySelector(".cursor").style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`
-})
+    
+    window.addEventListener( "mousemove",function(dets){
+      document.querySelector(".cursor").style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`
+    })
+    
+    
+    
+    
 
 
 
 
+  }, []);
 
 
-}
+
+
+
+
 
 
 
