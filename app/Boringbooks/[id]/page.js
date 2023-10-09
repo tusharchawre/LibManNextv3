@@ -12,7 +12,7 @@ import axios from "axios";
 
 
 async function getDatashit() {
-  const res = await fetch( `${process.env.URL_}/api/techknowledge`, {cache:"no-store"})
+  const res = await fetch( `${process.env.URL_}/api/techknowledge`,  { next: { revalidate: 1 } })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -30,7 +30,7 @@ async function getDatashit() {
 
 async function getData(id) {
 
-  const res = await fetch(`${process.env.URL_}/api/techknowledge/${id}`, {cache:"no-store"})
+  const res = await fetch(`${process.env.URL_}/api/techknowledge/${id}`,  { next: { revalidate: 1 } })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
