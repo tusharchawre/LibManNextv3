@@ -1,7 +1,8 @@
 
 import React from 'react'
-import Menu from 'app/components/Menu'
+
 import "app/Home/Home.css"
+import Menu2 from '../components/Menu2'
 
 
 
