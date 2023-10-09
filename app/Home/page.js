@@ -41,6 +41,13 @@ const page = async () => {
     if(!process.env.URL_){
       return null;
     }
+
+
+
+
+    else{
+
+    
     const data = await getData()
 
 
@@ -181,7 +188,7 @@ const page = async () => {
     </div>
 
        </>
-  )
+  )}
 }
 
 export default page
