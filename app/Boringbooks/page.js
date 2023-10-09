@@ -1,13 +1,12 @@
-"use client"
-import React from 'react'
 
+import React from 'react'
+import Menu from 'app/components/Menu'
 import "app/Home/Home.css"
-import Menu2 from '../components/Menu2'
 
 
 
 async function getData() {
-  const res = await fetch( `${process.env.URL_}/api/techknowledge`, {next : {revalidate:10}})
+  const res = await fetch( `${process.env.URL_}/api/techknowledge`, {next: { revalidate: 1 }})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -71,8 +70,5 @@ const page = async () => {
     </div>
   )  }
 }
-
-
-
 
 export default page
