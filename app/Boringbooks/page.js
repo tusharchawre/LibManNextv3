@@ -5,6 +5,7 @@ import "app/Home/Home.css"
 import Menu2 from '../components/Menu2'
 
 
+export const fetchCache = 'force-no-store';
 
 async function getData() {
   const res = await fetch( `${process.env.URL_}/api/techknowledge`, {next: { revalidate: 1 }})
