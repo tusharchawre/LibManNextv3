@@ -10,7 +10,7 @@ import React from "react";
 
 
 async function getDatashit() {
-  const res = await fetch(process.env.URL_ + '/api/books', {cache:"no-store"})
+  const res = await fetch( `${process.env.URL_}/api/books`, {cache:"no-store"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

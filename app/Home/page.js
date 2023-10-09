@@ -5,7 +5,8 @@ import Link from "next/link";
 import "./Home.css"
 
 import axios from "axios";
-import Menu from "app/components/Menu.js";
+
+import Menu2 from "../components/Menu2";
 
 
 // let booksArr = [["AfterTheBanquet","/assets/Home-Img/AfterTheBanquet.jpg"],
@@ -19,7 +20,7 @@ import Menu from "app/components/Menu.js";
 
 
 async function getData() {
-  const res = await fetch(process.env.URL_+'/api/books', {cache:"no-store"})
+  const res = await fetch(`${process.env.URL_}/api/books`, {cache:"no-store"})
 
  
   if (!res.ok) {
@@ -104,7 +105,7 @@ const page = async () => {
   <div className="profile"></div>
  </div>
 
- <Menu />
+ <Menu2 />
 
 
     <div className="thumbpane">

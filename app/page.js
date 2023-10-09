@@ -7,7 +7,7 @@ import Menu2 from 'app/components/Menu2.js'
 import './App.css'
 import gsap, { Bounce, Power2, Power3 } from 'gsap';
 import Image from 'next/image';
-import Menu from './components/Menu'
+
 
 
 

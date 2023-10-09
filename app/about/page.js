@@ -1,11 +1,13 @@
 import React from 'react'
-import Menu from 'app/components/Menu.js'
+import "app/Home/Home.css"
+
+import Menu2 from '../components/Menu2'
 
 const page = () => {
   return (
     <div>
       about
-      <Menu />
+      <Menu2 />
     </div>
   )
 }

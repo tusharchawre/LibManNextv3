@@ -12,7 +12,7 @@ import axios from "axios";
 
 
 async function getDatashit() {
-  const res = await fetch( process.env.URL_  +'/api/techknowledge', {cache:"no-store"})
+  const res = await fetch( `${process.env.URL_}/api/techknowledge`, {cache:"no-store"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
