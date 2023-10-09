@@ -23,6 +23,9 @@ const page = async () => {
     return null;
   }
    
+  else{
+
+
 
   const data = await getData()
 
@@ -65,7 +68,7 @@ const page = async () => {
     </div>
 
     </div>
-  )
+  )  }
 }
 
 export default page

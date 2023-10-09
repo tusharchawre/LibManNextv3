@@ -46,7 +46,7 @@ const page = async ({params}) => {
     return null;
   }
 
-
+else{
   
  
 const data = await getData(params.id)
@@ -155,7 +155,7 @@ const datashit = await getDatashit()
 
 
 
-  )
+  )}
 }
 
 export default page

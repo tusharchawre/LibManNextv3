@@ -43,7 +43,7 @@ const page = async ({params}) => {
 if(!process.env.URL_){
   return null;
 }
-  
+  else{
  
 const data = await getData(params.id)
 
@@ -154,7 +154,7 @@ const datashit = await getDatashit()
 
 
 
-  )
+  )}
 }
 
 export default page
