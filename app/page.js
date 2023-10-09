@@ -33,109 +33,110 @@ const page = () => {
 
 
 
-useEffect(() => {
+
 
 let herotext = document.querySelector(".herotext1")
 
-
-
-
-
-
-
-
-
-window.addEventListener("scroll",function(){
-
-  let parallax = document.getElementById("books")
-var book1 = parallax.querySelector(".book1")
-var book2 = parallax.querySelector(".book2")
-var book3 = parallax.querySelector(".book3")
-
-
-   var scrollpos = this.scrollY;
-//   console.log(scrollpos)
-//  parallax.animate(
-//   {transform: `translate(0%,-${scrollpos}%) `},
-//   {duration:1200,fill:"forwards"}
-//  )
-
-
-var diffrot = Math.floor(scrollpos*0.1)
-
-
-
-
-gsap.from(book1,{
-
-  rotate: -diffrot,
-  ease: Power3
-})
-
-gsap.from(book2,{
-  rotate: diffrot,
-  ease: Power3
-})
-
-gsap.from(book3,{
-  rotate: -diffrot,
-  ease: Power3
-})
-
-
-
-gsap.to(parallax,{
-  y:`-${scrollpos}*2`,
-  ease: Power3,
+if (typeof window !== "undefined") {
   
-})
-});
+  
+  
+  
+  
+  
+  
 
-
-
-
-
-
-
-window.onmousedown = e => {
-  const track = document.getElementById("image-track");
-
-  track.dataset.mouseDownAt = e.clientX;
-}
-
-window.onmouseup = () => {
-  const track = document.getElementById("image-track");
-
-  track.dataset.mouseDownAt = "0";
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
-window.onmousemove = e =>{
-  const track = document.getElementById("image-track");
-
-  if(track.dataset.mouseDownAt === "0")return;
-
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-  maxDelta = window.innerWidth / 2;
-
-  const percentage = (mouseDelta/maxDelta) * -100,
-   nextpercentageconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-   nextpercentage = Math.max(Math.min(nextpercentageconstrained,0),-100);
-
-
-
-        track.dataset.percentage = nextpercentage;
-     
-        Math.floor(nextpercentage)
-
-        track.animate({
-          transform: `translate(${Math.floor(nextpercentage)}%,-50%)`
-        },{
-          duration: 1200, fill: "forwards"
-        });
-
-  track.style.transform = `translate(${nextpercentage}%,-50%)`;
-
+  window.addEventListener("scroll",function(){
+    
+    let parallax = document.getElementById("books")
+    var book1 = parallax.querySelector(".book1")
+    var book2 = parallax.querySelector(".book2")
+    var book3 = parallax.querySelector(".book3")
+    
+    
+    var scrollpos = this.scrollY;
+    //   console.log(scrollpos)
+    //  parallax.animate(
+      //   {transform: `translate(0%,-${scrollpos}%) `},
+      //   {duration:1200,fill:"forwards"}
+      //  )
+      
+      
+      var diffrot = Math.floor(scrollpos*0.1)
+      
+      
+      
+      
+      gsap.from(book1,{
+        
+        rotate: -diffrot,
+        ease: Power3
+      })
+      
+      gsap.from(book2,{
+        rotate: diffrot,
+        ease: Power3
+      })
+      
+      gsap.from(book3,{
+        rotate: -diffrot,
+        ease: Power3
+      })
+      
+      
+      
+      gsap.to(parallax,{
+        y:`-${scrollpos}*2`,
+        ease: Power3,
+        
+      })
+    });
+    
+    
+    
+    
+    
+    
+    
+    window.onmousedown = e => {
+      const track = document.getElementById("image-track");
+      
+      track.dataset.mouseDownAt = e.clientX;
+    }
+    
+    window.onmouseup = () => {
+      const track = document.getElementById("image-track");
+      
+      track.dataset.mouseDownAt = "0";
+      track.dataset.prevPercentage = track.dataset.percentage;
+    }
+    
+    window.onmousemove = e =>{
+      const track = document.getElementById("image-track");
+      
+      if(track.dataset.mouseDownAt === "0")return;
+      
+      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      maxDelta = window.innerWidth / 2;
+      
+      const percentage = (mouseDelta/maxDelta) * -100,
+      nextpercentageconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+      nextpercentage = Math.max(Math.min(nextpercentageconstrained,0),-100);
+      
+      
+      
+      track.dataset.percentage = nextpercentage;
+      
+      Math.floor(nextpercentage)
+      
+      track.animate({
+        transform: `translate(${Math.floor(nextpercentage)}%,-50%)`
+      },{
+        duration: 1200, fill: "forwards"
+      });
+      
+      track.style.transform = `translate(${nextpercentage}%,-50%)`;
+      
   for(const image of track.getElementsByClassName("image")) {
     image.animate({
       objectPosition: `${100 + nextpercentage}% center`
@@ -145,7 +146,7 @@ window.onmousemove = e =>{
 
 const navanim = ()=>{
   gsap.from(".bruh",{
-
+    
     opacity: 0,
     duration: 1.5,
     ease: Power3
@@ -153,22 +154,23 @@ const navanim = ()=>{
   
 }
 
-  window.addEventListener( "mousemove",function(dets){
-    document.querySelector(".cursor").style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`
-  })
- 
- 
-
-
-}, [])
+window.addEventListener( "mousemove",function(dets){
+  document.querySelector(".cursor").style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`
+})
 
 
 
 
 
 
-  return (
-    <>
+}
+
+
+
+
+
+return (
+  <>
  <div className="main">
     <img src="/assets/Cursor.png" className='cursor' alt="" />
 
