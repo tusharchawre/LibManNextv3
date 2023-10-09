@@ -7,7 +7,7 @@ import Menu2 from '../components/Menu2'
 
 
 async function getData() {
-  const res = await fetch( `${process.env.URL_}/api/techknowledge`,  { next: { revalidate: 1 } })
+  const res = await fetch( `${process.env.URL_}/api/techknowledge`, {cache:"no-store"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

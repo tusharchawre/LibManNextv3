@@ -10,7 +10,7 @@ import React from "react";
 
 
 async function getDatashit() {
-  const res = await fetch( `${process.env.URL_}/api/books`, { next: { revalidate: 1 } })
+  const res = await fetch( `${process.env.URL_}/api/books`, {cache:"no-store"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -28,7 +28,7 @@ async function getDatashit() {
 
 async function getData(id) {
 
-  const res = await fetch(process.env.URL_+`/api/books/${id}`,  { next: { revalidate: 1 } })
+  const res = await fetch(process.env.URL_+`/api/books/${id}`, {cache:"no-store"})
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
