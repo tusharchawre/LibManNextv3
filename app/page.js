@@ -205,8 +205,8 @@ return (
     </div> */}
    
 
-
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+<img className='drag' src="/assets/Arrow 10.png" alt="" />
     <img src='/assets/pullup.png' draggable="false"></img>
     <img className='image' src='/assets/tracks/bookt1.jpg' draggable="false"></img>
 
@@ -218,27 +218,36 @@ return (
     </div>
 
     </div>
+<div className="info">
+<div className="section">
+<img  className="info-img" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="" />
+<div>
+<h3>"Download the World,One Book at a Time!"</h3>
+<p>Here you can download books for free!! <br />These pdfs are just a click away. <br />GOOOOOO!!</p>
+
+</div>
+
+</div>
+<div className="section sec2">
+<div>
+<h3>"Endless Books, Countless Worlds."</h3>
+<p>Books that aint similar to those cheesy self-help books. <br />Go read something. <br />We also have some boring books aligned... <br />Click that "BoringBooks" option on Nav.</p>
+
+</div>
+<img  className="info-img" src="https://plus.unsplash.com/premium_photo-1677187301444-fd793e33e8d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1523&q=80" />
+
+</div>
+</div>
+<div className="explore">
+<h1>Here's Passport to Literary Adventures.</h1>
+ <img src="/assets/Arrow 20.png" alt="" /> 
 
 
-    <div className='LandingPage footer'  id="parallax">
-
-
-    
-    </div>
-    <div className='LandingPage footer'  id="parallax">
-
-
-    
-    </div>
-    <div className='LandingPage footer'  id="parallax">
-
-
-    
-    </div>
+ </div>
     </div> 
 
     </>
-  )
+)
 }
 
 export default page

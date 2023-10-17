@@ -7,7 +7,7 @@ const Menu2 = () => {
     <div className="menu">
     <a href="/Home"><p>Home</p></a>
       
-    <a href="/Boringbooks"><p>BoringBooks</p></a>
+    <a href="/Boringbooks"><p>E-books</p></a>
     <a href="/about"><p>About</p></a>
     
     </div>

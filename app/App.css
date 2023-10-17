@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 /* Let's get this party started */
 
 @media screen and (max-width:600px) {
@@ -10,7 +10,20 @@
     display: none;
   }
   .LandingPage{
-    width: 90vw  !important;
+    width: 87vw  !important;
+
+   
+
+  }
+
+  .explore img{
+    left: 3% !important;
+      
+  }
+
+  .LandingPage p {
+    transform: translateY(0px) !important;
+
   }
   .herotext{
     height: 71vmin !important;
@@ -19,6 +32,7 @@
     height: 60% !important;
   }
   
+ 
 }
 
 
@@ -89,12 +103,12 @@ position: relative;
 
 text-align: center;
 font-family: Caveat;
-font-size: 5vw;
+
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 margin: 0;
-width: 900px;
+
 transform: translateY(-70px);
 
 
@@ -119,7 +133,11 @@ overflow-wrap: break-word;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
+.herotext1{
+  font-size: 5vw;
+  text-wrap: balance;
+  width: 60vw;
+}
 
 
 
@@ -146,13 +164,14 @@ top: 230px;
 
 #books{
 
-
+  position: relative;
+  z-index: 99;
   display: flex;
   height: 80%;
   justify-content: space-evenly;
   gap: 2vmax;
   align-items: flex-end;
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all ease-in-out;
 
 }
 
@@ -160,8 +179,40 @@ top: 230px;
   width: 23vw;
 }
 
+@keyframes fade-in-out{
+  0%{
+    opacity: 1;
+  }
+   50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+}
 
 
+
+
+.drag{
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: 20vw;
+  left: -7%;
+  pointer-events: hover;
+  animation: 2s infinite fade-in-out;
+}
 
 
 .footer{
@@ -203,3 +254,89 @@ top: 230px;
 }
 
 
+.section{
+  width: 65%;
+
+
+  font-family: 'Tilt Neon', sans-serif;
+
+  padding: 3vw 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.section h3{
+  font-size: 1.7vw;
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+
+
+}
+
+.sec2{
+  align-self: flex-end;
+  width: 60%;
+}
+
+.section p{
+  margin: 0 10px;
+  font-size: 1.2vw;
+
+
+}
+
+.section:hover img{
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), 2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.section img{
+  transition: 0.7s all ease-in-out;
+
+
+  margin: 0 3vw;
+
+  border-radius: 1vw;
+}
+
+
+
+
+.info-img{
+  height: 20vw;
+  width: 20vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+.explore{
+  font-family: Caveat;
+  font-size: 2vw;
+  background-color: #fff3d5de;
+height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore:hover img{
+  animation: 5s fade-in;
+  animation-iteration-count: 1;
+}
+
+.explore img{
+  width: 10vmax;
+
+  position: absolute;
+  bottom: 80px;
+  left: 33%
+}

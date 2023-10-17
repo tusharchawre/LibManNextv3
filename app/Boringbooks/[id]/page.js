@@ -51,7 +51,7 @@ else{
  
 const data = await getData(params.id)
 
-
+console.log(data)
 
 
 
@@ -80,9 +80,6 @@ const datashit = await getDatashit()
       <img className='thumbs' src={data[0].img} alt="" />
      <div className="details">
      <p >Product Details</p>
-      <p>ISBN-13: 9781421522449</p>
-      <p>Publisher: Viz Media</p>
-      <p>Publisher Imprint: Viz Media</p>
       <p>Publisher Date: {data[0].date_publish}</p>
       <p>No of Pages: {data[0].Pages}</p>
       <p>Genre: {data[0].Genre}</p>
