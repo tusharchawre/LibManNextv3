@@ -3,6 +3,7 @@ import React from 'react'
 
 import "app/Home/Home.css"
 import Menu2 from '../components/Menu2'
+import Navbar from '../components/Navbar';
 
 
 export const fetchCache = 'force-no-store';
@@ -36,16 +37,13 @@ const page = async () => {
   
   return (
     <div>
-            
- <div className="nav">
 
- <a href="/Home">
+<Navbar />
 
-<h1> Title!</h1>
-</a>
-  <div className="profile"></div>
- </div>
+
  <Menu2 />
+
+ <h1 className="recommedations">E-books</h1>
 
 
     <div className="thumbpane">

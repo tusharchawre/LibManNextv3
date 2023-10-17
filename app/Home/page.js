@@ -7,6 +7,7 @@ import "./Home.css"
 import axios from "axios";
 
 import Menu2 from "../components/Menu2";
+import Navbar from "../components/Navbar";
 
 
 // let booksArr = [["AfterTheBanquet","/assets/Home-Img/AfterTheBanquet.jpg"],
@@ -98,14 +99,11 @@ const page = async () => {
   return (
     <>
        
- <div className="nav">
-
-      
-<h1>Title!</h1>
-  <div className="profile"></div>
- </div>
+<Navbar />
 
  <Menu2 />
+
+ <h1 className="recommedations">Our Recommendations</h1>
 
 
     <div className="thumbpane">

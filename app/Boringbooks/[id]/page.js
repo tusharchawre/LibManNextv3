@@ -5,6 +5,8 @@ import "app/Home/Home.css"
 import "app/[id]/Page.css"
 import React from "react";
 import axios from "axios";
+import Navbar from "@/app/components/Navbar";
+import Navbar2 from "@/app/components/Navbar2";
 
 
 
@@ -51,7 +53,6 @@ else{
  
 const data = await getData(params.id)
 
-console.log(data)
 
 
 
@@ -65,15 +66,8 @@ const datashit = await getDatashit()
   return (
 <>
 <div className="main">
-<div className="nav">
+<Navbar2 />
 
-<a href="/Boringbooks">
-
-<h1> Title!</h1>
-</a>
-      
-  <div className="profile"></div>
- </div>
 
     <div className="aboutpage">
       <div className="thumb">
@@ -90,7 +84,7 @@ const datashit = await getDatashit()
       <div className="jankari">
         <div className="heading">
           <h1>{data[0].title}</h1>
-          <p>Author: {data[0].author} | Publisher: Viz Media |</p>
+          <p>Author: {data[0].author}</p>
         </div>
         <div className="about-book">
         <h4>About the Book</h4>
@@ -120,7 +114,7 @@ const datashit = await getDatashit()
    <div className="horizontaltrack">
 
    {datashit.map((item)=>(<>
-        <a  key={item} href={`/${item.title}`}>
+        <a  key={item} href={`/Boringbooks/${item.title}`}>
 
      
 

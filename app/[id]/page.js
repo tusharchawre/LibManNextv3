@@ -4,6 +4,8 @@
 import "app/Home/Home.css"
 import "app/[id]/Page.css"
 import React from "react";
+import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 
 
 
@@ -61,15 +63,8 @@ const datashit = await getDatashit()
   return (
 <>
 <div className="main">
-<div className="nav">
 
-    <a href="/Home" >
-
-<h1>Title!</h1>
-    </a>  
-  <div className="profile"></div>
- </div>
-
+<Navbar2 />
 
 
 
@@ -79,9 +74,8 @@ const datashit = await getDatashit()
       <img className='thumbs' src={data[0].img} alt="" />
      <div className="details">
      <p >Product Details</p>
-      <p>ISBN-13: 9781421522449</p>
-      <p>Publisher: Viz Media</p>
-      <p>Publisher Imprint: Viz Media</p>
+
+
       <p>Publisher Date: {data[0].date_publish}</p>
       <p>No of Pages: {data[0].Pages}</p>
       <p>Genre: {data[0].Genre}</p>
@@ -92,7 +86,7 @@ const datashit = await getDatashit()
       <div className="jankari">
         <div className="heading">
           <h1>{data[0].title}</h1>
-          <p>Author: {data[0].author} | Publisher: Viz Media |</p>
+          <p>Author: {data[0].author}</p>
         </div>
         <div className="about-book">
         <h4>About the Book</h4>
